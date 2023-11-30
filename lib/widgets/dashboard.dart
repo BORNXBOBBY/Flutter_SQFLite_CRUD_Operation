@@ -15,9 +15,11 @@ class _DashBoardState extends State<DashBoard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
-        title:const Text("Sqlite") ,
+        title:Text("SQFlite CRUD Operation") ,
       ),
+
       body: Center(
         child: Column(
           children: [
