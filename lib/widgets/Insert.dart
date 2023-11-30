@@ -41,6 +41,7 @@ class _InsertPageState extends State<InsertPage> {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.green,
         title: Text("Insert Data insqlite Crud"),
       ),
       body: SingleChildScrollView(
@@ -55,8 +56,9 @@ class _InsertPageState extends State<InsertPage> {
                     Container(
                       margin: EdgeInsets.all(25),
                       child: Text(
+
                           "Regestration Form",
-                          style:TextStyle(fontWeight: FontWeight.bold,fontSize: 23) ),
+                          style:TextStyle(fontWeight: FontWeight.bold,fontSize: 23,color: Colors.green) ),
                     ),
                   ],
                 ),
@@ -137,7 +139,14 @@ class _InsertPageState extends State<InsertPage> {
                       Navigator.of(context).pop();
                     }
                   },
-                  child: Text("Submit"),
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.green, // Change button background color
+                    onPrimary: Colors.white, // Change text color
+                  ),
+                  child: Text(
+                    "Submit",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
             ],

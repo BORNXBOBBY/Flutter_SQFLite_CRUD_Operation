@@ -123,8 +123,15 @@ class _ViewPageState extends State<ViewPage> {
                   updateContactController.text = '';
                   Navigator.of(context).pop();
                 },
-                child: Text(id == null ? 'Create New' : 'Update'),
-              )
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.green, // Change button background color
+                  onPrimary: Colors.white, // Change text color
+                ),
+                child: Text(id == null ? 'Create New' : 'Update',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+
             ],
           ),
         ),
@@ -159,6 +166,7 @@ class _ViewPageState extends State<ViewPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.green,
         title: Text("ViewPage update and delete"),
       ),
       body: _isLoading

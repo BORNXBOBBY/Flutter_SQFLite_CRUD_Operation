@@ -17,6 +17,7 @@ class _DashBoardState extends State<DashBoard> {
     return Scaffold(
 
       appBar: AppBar(
+        backgroundColor: Colors.green,
         title:Text("SQFlite CRUD Operation") ,
       ),
 
@@ -24,16 +25,38 @@ class _DashBoardState extends State<DashBoard> {
         child: Column(
           children: [
             ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => InsertPage(),));
-                },
-                child: Text("Insert")),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => InsertPage()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Colors.green, // Change button background color
+                onPrimary: Colors.white, // Change text color
+              ),
+              child: Text(
+                "Insert",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
 
             ElevatedButton(
-                onPressed: () async{
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => ViewPage(),));
-                },
-                child: Text("ViewPage Update and Delete")),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ViewPage()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Colors.green, // Change button background color
+                onPrimary: Colors.white, // Change text color
+              ),
+              child: Text(
+                "ViewPage Update and Delete",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
 
           ],
         ),
